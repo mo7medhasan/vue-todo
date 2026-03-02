@@ -1,0 +1,62 @@
+@import './base.css';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #ef4444;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-weight: inherit;
+  margin: 0;
+}
+
+main {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+main>div,
+main>form {
+  padding: 0.5rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+input {
+  font-size: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+ width: 100%;
+}
+input[type="checkbox"]{
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+input:placeholder-shown{
+  font-style: italic;
+}
+button{
+  background-color: white;
+  border-color:#0000001a;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+}
+

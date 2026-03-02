@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Clean Car",
+    "completed": false,
+    "id": 1
+  },
+  {
+    "title": "Read a book",
+    "completed": false,
+    "id": 2
+  },
+  {
+    "title": "Take a nap",
+    "completed": false,
+    "id": 3
+  }
+]

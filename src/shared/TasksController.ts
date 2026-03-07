@@ -3,7 +3,7 @@ import { Task } from "./task";
 
 
 export class TasksController {
-@BackendMethod({allowed:Allow.authenticated})
+@BackendMethod({allowed:true})
 static async setAllCompleted(completed:boolean){
     const taskRepo = remult.repo(Task); 
       for(const task of await taskRepo.find()){

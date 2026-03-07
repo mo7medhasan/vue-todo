@@ -1,27 +1,6 @@
-<template>
-    <div v-if="signedIn">
-        Hello {{remult.user?.name}}
-        <button @click="$event=>signOut()">Sign out</button>
-        <App />
-    </div>
-    <div v-else>
-        <h1>
-            todos
-        </h1>
-        <main>  
-            <form @submit.prevent="$event=>signIn()">
-                <input v-model="username" placeholder="username, try jane or steve"/>
-                <button>
-                    sign in 
-                </button>
-            </form>
-        </main>
-    </div>
-
-</template>
-<script setup lang="ts">
+<script setup>
+// import App from '@/App.vue';
 import { remult } from 'remult';
-import App from '../App.vue';
 import { onMounted, ref } from 'vue';
 
 const username=ref("");
@@ -56,3 +35,25 @@ async function signOut(){
     signedIn.value=false;
 }
 </script>
+<template>
+    <div v-if="signedIn">
+        Hello {{remult.user?.name}}
+        <button @click="$event=>signOut()">Sign out</button>
+        <!-- <App  /> -->
+    </div>
+    <div v-else>
+        <h1>
+            todos
+        </h1>
+        <main>  
+            <form @submit.prevent="$event=>signIn()"
+               >
+                <input v-model="username" placeholder="username, try jane or steve"/>
+                <button>
+                    sign in 
+                </button>
+            </form>
+        </main>
+    </div>
+
+</template>
